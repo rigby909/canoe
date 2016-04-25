@@ -9,9 +9,9 @@
 	</head>
 	<body>
 		<div id = "game">
-			<div id='field' v-on:mousemove = 'onMove' v-bind:style = "{width:fieldWidth.toString() + 'px'}">
-				<div id = 'ball'> </div>
-				<div id = 'board' v-bind:style = "{left:boardPosition.toString() + 'px', width:boardWidth.toString() + 'px'}"> </div>
+			<div id='field' v-on:click='onClick' v-on:mousemove = 'onMove' v-bind:style = "{width:fieldWidth.toString() + 'px', height:fieldHeight.toString() + 'px'}">
+				<div id = 'ball' v-bind:style = "{left:ballX.toString() + 'px', top:ballY.toString() + 'px', width:ballWidth.toString() + 'px', height:ballHeight.toString() + 'px'}"> </div>
+				<div id = 'board' v-bind:style = "{left:boardPosition.toString() + 'px', width:boardWidth.toString() + 'px', height:boardHeight.toString() + 'px'}"> </div>
 			</div>
 		</div>
 	</body>
